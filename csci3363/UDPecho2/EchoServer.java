@@ -3,7 +3,6 @@ package csci3363.UDPecho2;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.nio.charset.StandardCharsets;
 
 public class EchoServer {
     
@@ -26,7 +25,7 @@ public class EchoServer {
                 System.out.println(in_packet.getSocketAddress());
 
                 /* convert the byte array to a string */
-                var in_msg = new String(in_buf, StandardCharsets.UTF_8);
+                var in_msg = new String(in_buf, 0, in_packet.getLength());
 
                 /* create a buffer with the response message (same as received message) */
                 var out_buf = in_msg.getBytes();
