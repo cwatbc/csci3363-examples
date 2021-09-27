@@ -14,7 +14,7 @@ public class EchoServer {
             var sock = new DatagramSocket(3363);
         ) {
             /* use a buffer to hold the incoming bytes */
-            var in_buf = new byte[1600];
+            var in_buf = new byte[1400];
 
             /* need a packet to hold the incoming data, stored in in_buf */
             var in_packet = new DatagramPacket(in_buf, in_buf.length);

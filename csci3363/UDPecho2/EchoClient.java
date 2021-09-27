@@ -33,7 +33,7 @@ public class EchoClient {
             socket.send(out_packet);
 
             /* need a buffer to hold the response */
-            var in_buf = new byte[1600];
+            var in_buf = new byte[1400];
 
             /* need a packet to hold the response */
             var in_packet = new DatagramPacket(in_buf, in_buf.length);
